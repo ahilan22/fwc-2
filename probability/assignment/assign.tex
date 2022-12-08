@@ -222,7 +222,7 @@ breaklines=true
 	\small
 	\centering
 		\begin{tabular}[20pt]{|c|c|c|} \hline
-			\textbf{Probability}&\textbf{Calculation}&\textbf{Value}\\ \hline
+			\T \B \textbf{Probability}&\textbf{Calculation}&\textbf{Value}\\ \hline
 			P$(X=0)$ \T \B &$\comb{4}{0} \times \cfrac{24}{30}\times \cfrac{24}{30}\times \cfrac{24}{30}\times \cfrac{24}{30}$ &$\cfrac{256}{625}$ \\[1.5ex] \hline
 			P$(X=1)$ \T \B &$\comb{4}{1} \times \cfrac{6}{30}\times \cfrac{24}{30}\times \cfrac{24}{30}\times \cfrac{24}{30}$  &$\cfrac{256}{625}$ \\[1.5ex] \hline
 			P$(X=2)$ \T \B &$\comb{4}{2} \times \cfrac{6}{30}\times \cfrac{6}{30}\times \cfrac{24}{30}\times \cfrac{24}{30}$   &$\cfrac{96}{625}$  \\[1.5ex] \hline
@@ -233,12 +233,14 @@ breaklines=true
 	\begin{table}[h!]
 	\normalsize
 	\centering
-		\begin{tabular}[20pt]{|>{\columncolor[gray]{0.8}}c|>{\columncolor[gray]{0.95}}c|>{\columncolor[gray]{0.95}}c|>{\columncolor[gray]{0.95}}c|>{\columncolor[gray]{0.95}}c|>{\columncolor[gray]{0.95}}c|} \hline
+		\newcolumntype{a}{>{\columncolor[gray]{0.95}}c}
+		%\begin{tabular}[20pt]{|>{\columncolor[gray]{0.8}}c|>{\columncolor[gray]{0.95}}c|>{\columncolor[gray]{0.95}}c|>{\columncolor[gray]{0.95}}c|>{\columncolor[gray]{0.95}}c|>{\columncolor[gray]{0.95}}c|} \hline
+			\begin{tabular}[20pt]{|>{\columncolor[gray]{0.8}}c|a|a|a|a|a|} \hline
 			$X$&0&1&2&3&4 \T \\ \hline
 			P($X$)&$\cfrac{256}{625}$&$\cfrac{256}{625}$&$\cfrac{96}{625}$&$\cfrac{16}{625}$&$\cfrac{1}{625}$\\[1.5ex] \hline
 		\end{tabular}\\[2ex]
 		\caption{Probability Distribution of $X$}
 	\end{table}\\
 \end{enumerate}
-**Read question numbers as (Chapter number).(Exercise number).(Question number)
+\footnotesize{**Read question numbers as (CHAPTER NUMBER).(EXERCISE NUMBER).(QUESTION NUMBER)}
 \end{document}
