@@ -1,108 +1,11 @@
-\let\negmedspace\undefined
-\let\negthickspace\undefined
 \documentclass[journal,12pt,twocolumn]{IEEEtran}
-%\documentclass[conference]{IEEEtran}
-%\IEEEoverridecommandlockouts
-% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
-%\usepackage{cite}
 \usepackage{amssymb,amsfonts,amsthm,amsmath}
-%\usepackage{algorithmic}
-%\usepackage{graphicx}
-%\usepackage{textcomp}
-%\usepackage{xcolor}
-%\usepackage{txfonts}
-\usepackage{listings}
 \usepackage{enumitem}
-%\usepackage{mathtools}
-%\usepackage{gensymb}
-%\usepackage{bm}
-%\usepackage{tikz}
-%\usepackage{hyperref}
-%\usepackage{color}                                            %%
-%\usepackage{array}                                            %%
-%\usepackage{longtable}                                        %%
-%\usepackage{calc}                                             %%
-%\usepackage{multirow}                                         %%
-%\usepackage{hhline}                                           %%
-%\usepackage{ifthen}                                           %%
-\usepackage{bigstrut}
 \usepackage{colortbl}
 
-%\renewcommand{\baselinestretch}{2}
-\renewcommand\thesection{\arabic{section}}
-\renewcommand\thesubsection{\thesection.\arabic{subsection}}
-\renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
-
-\renewcommand\thesectiondis{\arabic{section}}
-\renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
-\renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{subsubsection}}
-
-% correct bad hyphenation here
-\hyphenation{op-tical net-works semi-conduc-tor}
-\def\inputGnumericTable{}                                 %%
-
-\lstset{
-language=tex,
-frame=single, 
-breaklines=true
-}
-
-\begin{document}
-
-\newtheorem{theorem}{Theorem}[section]
-\newtheorem{problem}{Problem}
-\newtheorem{proposition}{Proposition}[section]
-\newtheorem{lemma}{Lemma}[section]
-\newtheorem{corollary}[theorem]{Corollary}
-\newtheorem{example}{Example}[section]
-\newtheorem{definition}[problem]{Definition}
-%\newtheorem{thm}{Theorem}[section] 
-%\newtheorem{defn}[thm]{Definition}
-%\newtheorem{algorithm}{Algorithm}[section]
-%\newtheorem{cor}{Corollary}
-\newcommand{\BEQA}{\begin{eqnarray}}
-\newcommand{\EEQA}{\end{eqnarray}}
-\newcommand{\define}{\stackrel{\triangle}{=}}
-\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
-    \node[shape=circle,draw,inner sep=2pt] (char) {#1};}}
-
-\bibliographystyle{IEEEtran}
-%\bibliographystyle{ieeetr}
-
-
-\providecommand{\mbf}{\mathbf}
-\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
-\providecommand{\re}[1]{\ensuremath{\text{Re}\left(#1\right)}}
-\providecommand{\im}[1]{\ensuremath{\text{Im}\left(#1\right)}}
-\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
-\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
-\providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.}}
-\providecommand{\rsbrak}[1]{\ensuremath{{}\left.#1\right]}}
-\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
-\providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.}}
-\providecommand{\rbrak}[1]{\ensuremath{\left.#1\right)}}
 \providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
-\providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
-\providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
-\theoremstyle{remark}
-\newtheorem{rem}{Remark}
-\newcommand{\sgn}{\mathop{\mathrm{sgn}}}
-\providecommand{\abs}[1]{\left\vert#1\right\vert}
-\providecommand{\res}[1]{\Res\displaylimits_{#1}} 
-\providecommand{\norm}[1]{\left\lVert#1\right\rVert}
-%\providecommand{\norm}[1]{\lVert#1\rVert}
-\providecommand{\mtx}[1]{\mathbf{#1}}
-\providecommand{\mean}[1]{E\left[ #1 \right]}
-\providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
-%\providecommand{\hilbert}{\overset{\mathcal{H}}{ \rightleftharpoons}}
-\providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
-	%\newcommand{\solution}[2]{\textbf{Solution:}{#1}}
 \newcommand{\solution}{\noindent \textbf{Solution: }}
-\newcommand{\cosec}{\,\text{cosec}\,}
-\providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
-\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
-\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
-	\newcommand*{\permcomb}[4][0mu]{{{}^{#3}\mkern#1#2_{#4}}}
+\newcommand*{\permcomb}[4][0mu]{{{}^{#3}\mkern#1#2_{#4}}}
 \newcommand*{\perm}[1][-3mu]{\permcomb[#1]{P}}
 \newcommand*{\comb}[1][-1mu]{\permcomb[#1]{C}}
 \newcommand\numberthis{\addtocounter{equation}{1}\tag{\theequation}}
@@ -110,26 +13,7 @@ breaklines=true
 \newcommand\B{\rule[-1.2ex]{0pt}{0pt}} % Bottom strut
 \setlist[enumerate]{font=\small\bfseries}
 
-%\numberwithin{equation}{section}
-\numberwithin{equation}{subsection}
-%\numberwithin{problem}{section}
-%\numberwithin{definition}{section}
-\makeatletter
-\@addtoreset{figure}{problem}
-\makeatother
-
-\let\StandardTheFigure\thefigure
-\let\vec\mathbf
-\let\j\jmath
-%\renewcommand{\thefigure}{\theproblem.\arabic{figure}}
-\renewcommand{\thefigure}{\theproblem}
-%\setlist[enumerate,1]{before=\renewcommand\theequation{\theenumi.\arabic{equation}}
-%\counterwithin{equation}{enumi}
-
-
-%\renewcommand{\theequation}{\arabic{subsection}.\arabic{equation}}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
 
 \title{Probability(NCERT)}
 \author{Ahilan R - FWC22090
@@ -138,28 +22,10 @@ breaklines=true
 
 \maketitle
 
-%\tableofcontents
-%\begin{abstract}
-%	Read question numbers as (Chapter-Number).(Exercise-Number).(Question-Number)
-%\end{abstract}
-
-%\begin{abstract}
-%Read question numbers as (Chapter-Number).(Exercise-Number).(Question-Number)
-%\end{abstract}
-%\footnote{Read question numbers as (Chapter-Number).(Exercise-Number).(Question-Number)}
-
-\renewcommand{\thefigure}{\theenumi}
-\renewcommand{\thetable}{\theenumi}
-\renewcommand{\theequation}{\theenumi}
-
 \section*{Class XI}
 %\addcontentsline{toc}{section}{\protect\numberline{}Class XI}
-%\section{Class XI}
-%\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
 \begin{enumerate}[label=16.\arabic{enumi}.\arabic{enumii}]%,ref=\thesection.\theenumi.\theenumi]
 \numberwithin{equation}{enumi}
-\numberwithin{figure}{enumi}
-\numberwithin{table}{enumi}
 \setcounter{enumi}{3}
 \setcounter{enumii}{6}
 \item Three letters are dictated to three persons and an envelope is addressed to each of them, the letters are inserted into the envelopes at random so that each envelope contains exactly one letter. Find the probability that at least one letter is in its proper envelope.\\
@@ -171,10 +37,8 @@ breaklines=true
 \end{enumerate}
 
 \section*{Class XII}
-%\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
-\begin{enumerate}[label=13.\arabic{enumi}.\arabic{enumii}]%,ref=\thesection.\theenumi.\theenumi]
+\begin{enumerate}[label=13.\arabic{enumi}.\arabic{enumii}]
 \numberwithin{equation}{enumi}
-\numberwithin{figure}{enumi}
 \numberwithin{table}{enumi}
 
 %%%%% 13.2.3
@@ -219,10 +83,6 @@ breaklines=true
 		Let $X$ be the random variable denoting the number of defective bulbs. Let $E_1 \text{ and } E_2$ be the event of drawing a non-defective bulb and a defective bulb.
 		\[ \text{P}(E_1)=\cfrac{24}{30} \text{ , } \text{P}(E_2)=\cfrac{6}{30} \numberthis\]
 		Since we replace the item after drawing out of the box, (using multiplication rule)
-%	\begin{align}
-%		\text{P}(X=0) = \cap X_2\cap X_3) \\
-%		\text{P}(X_1)\text{P}(X_2|X_1)\text{P}(X_3|X_2X_1) \\
-%	\end{align}
 	\begin{table}[h]
 	\small
 	\centering
@@ -239,7 +99,6 @@ breaklines=true
 	\normalsize
 	\centering
 		\newcolumntype{a}{>{\columncolor[gray]{0.95}}c}
-		%\begin{tabular}[20pt]{|>{\columncolor[gray]{0.8}}c|>{\columncolor[gray]{0.95}}c|>{\columncolor[gray]{0.95}}c|>{\columncolor[gray]{0.95}}c|>{\columncolor[gray]{0.95}}c|>{\columncolor[gray]{0.95}}c|} \hline
 			\begin{tabular}[20pt]{|>{\columncolor[gray]{0.8}}c|a|a|a|a|a|} \hline
 			$X$&0&1&2&3&4 \T \\ \hline
 			P($X$)&$\cfrac{256}{625}$&$\cfrac{256}{625}$&$\cfrac{96}{625}$&$\cfrac{16}{625}$&$\cfrac{1}{625}$\\[1.5ex] \hline
