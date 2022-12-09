@@ -177,6 +177,8 @@ breaklines=true
 \numberwithin{figure}{enumi}
 \numberwithin{table}{enumi}
 
+%%%%% 13.2.3
+
 \setcounter{enumi}{1}
 \setcounter{enumii}{3}
 \item A box of oranges is inspected by examining three randomly selected oranges drawn without replacement. If all the three oranges are good, the box is approved for sale, otherwise, it is rejected. Find the probability that a box containing 15 oranges out of which 12 are good and 3 are bad ones will be approved for sale.\\
@@ -201,19 +203,22 @@ breaklines=true
 			P$(X_3|X_2X_1)$&$\cfrac{10}{13}$  \\[1.5ex] \hline
 		\end{tabular}
 	\end{table}\\
-	Probability of the given box being approved for sale,
+		Probability of the given box being approved for sale, (using multiplication rule)
 	\begin{align}
-		=& {}\text{P}(X_1\cap X_2\cap X_3) \\
+		=& {}\text{P}(X_1 X_2 X_3) \\
 		=& {}\text{P}(X_1)\text{P}(X_2|X_1)\text{P}(X_3|X_2X_1) \\
 		=& \cfrac{12 \times 11 \times 10}{15 \times 14 \times 13} = \cfrac{44}{91}
 	\end{align}
+
+%%%%% 13.4.6
+
 \setcounter{enumi}{3}
 \setcounter{enumii}{6}
 \item From a lot of 30 bulbs which include 6 defectives, a sample of 4 bulbs is drawn at random with replacement. Find the probability distribution of the number of defective bulbs.\\
 	\solution
 		Let $X$ be the random variable denoting the number of defective bulbs. Let $E_1 \text{ and } E_2$ be the event of drawing a non-defective bulb and a defective bulb.
 		\[ \text{P}(E_1)=\cfrac{24}{30} \text{ , } \text{P}(E_2)=\cfrac{6}{30} \numberthis\]
-		Since we replace the item after drawing out of the box,
+		Since we replace the item after drawing out of the box, (using multiplication rule)
 %	\begin{align}
 %		\text{P}(X=0) = \cap X_2\cap X_3) \\
 %		\text{P}(X_1)\text{P}(X_2|X_1)\text{P}(X_3|X_2X_1) \\
