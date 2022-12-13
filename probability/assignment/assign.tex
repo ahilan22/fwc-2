@@ -24,25 +24,30 @@
 
 \section*{Class XI}
 %\addcontentsline{toc}{section}{\protect\numberline{}Class XI}
+
 \begin{enumerate}[label=16.\arabic{enumi}.\arabic{enumii}]%,ref=\thesection.\theenumi.\theenumi]
 \numberwithin{equation}{enumi}
 \setcounter{enumi}{3}
 \setcounter{enumii}{6}
 \item Three letters are dictated to three persons and an envelope is addressed to each of them, the letters are inserted into the envelopes at random so that each envelope contains exactly one letter. Find the probability that at least one letter is in its proper envelope.\\
 	\solution 
-	Let the three letter be A, B, and C and the proper order for ABC, i.e., letters to be kept in respective(proper) envelopes. Total number of ways in which letters A, B, C can be inserted into envelopes is \[3!=6=n(S) \numberthis \] Let $X$ be the event where at least one letter is in proper envelope. \[X = \cbrak{\text{ACB, CBA, BAC, ABC}}\] $\implies n(X)=4.$ Therefore, 
+		Let $X$ be the random variable denoting the number of letters in proper envelopes. Then the total number of outcomes in this experiment's sample space is given by \[n(S)=3!=6 \numberthis \] So, the possible values for $X$ are \cbrak{0,1,3}. And,
   \begin{align}
-	  \text{P}(X) &= \cfrac{n(X)}{n(S)}= \cfrac{4}{6} = \cfrac{2}{3} 
+	  n(X=1) &= \comb{3}{1} \times 1 \times 1 = 3 \\
+	  n(X=3) &= 1 \times 1 \times 1 = 1
+  \end{align}
+  \begin{align}
+	  \therefore \text{P}_{req} = \cfrac{n(X=1)+n(X=3)}{n(S)} = \cfrac{4}{6} = \cfrac{2}{3} 
   \end{align}
 \end{enumerate}
 
 \section*{Class XII}
+
 \begin{enumerate}[label=13.\arabic{enumi}.\arabic{enumii}]
 \numberwithin{equation}{enumi}
 \numberwithin{table}{enumi}
 
 %%%%% 13.2.3
-
 \setcounter{enumi}{1}
 \setcounter{enumii}{3}
 \item A box of oranges is inspected by examining three randomly selected oranges drawn without replacement. If all the three oranges are good, the box is approved for sale, otherwise, it is rejected. Find the probability that a box containing 15 oranges out of which 12 are good and 3 are bad ones will be approved for sale.\\
@@ -69,13 +74,12 @@
 	\end{table}\\
 		Probability of the given box being approved for sale, (using multiplication rule)
 	\begin{align}
-		=& {}\text{P}(X_1 X_2 X_3) \\
-		=& {}\text{P}(X_1)\text{P}(X_2|X_1)\text{P}(X_3|X_2X_1) \\
-		=& \cfrac{12 \times 11 \times 10}{15 \times 14 \times 13} = \cfrac{44}{91}
+		=& \text{ }\text{P}(X_1 X_2 X_3) \\
+		=& \text{ }\text{P}(X_1)\text{P}(X_2|X_1)\text{P}(X_3|X_2X_1) \\
+		=& \text{ }\cfrac{12 \times 11 \times 10}{15 \times 14 \times 13} = \cfrac{44}{91}
 	\end{align}
 
 %%%%% 13.4.6
-
 \setcounter{enumi}{3}
 \setcounter{enumii}{6}
 \item From a lot of 30 bulbs which include 6 defectives, a sample of 4 bulbs is drawn at random with replacement. Find the probability distribution of the number of defective bulbs.\\
@@ -106,5 +110,6 @@
 		\caption{Probability Distribution of $X$}
 	\end{table}\\
 \end{enumerate}
-\footnotesize{**Read question numbers as (CHAPTER NUMBER).(EXERCISE NUMBER).(QUESTION NUMBER)}
+
+\noindent \footnotesize{**Read question numbers as (CHAPTER NUMBER).(EXERCISE NUMBER).(QUESTION NUMBER)}
 \end{document}
