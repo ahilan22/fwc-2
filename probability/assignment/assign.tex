@@ -2,9 +2,12 @@
 \usepackage{amssymb,amsfonts,amsthm,amsmath}
 \usepackage{enumitem}
 \usepackage{colortbl}
+\usepackage{hyperref}
 
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
 \providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
 \newcommand{\solution}{\noindent \textbf{Solution: }}
+%\newcommand{\varsol}{\noindent \textbf{Aliter: }}
 \newcommand*{\permcomb}[4][0mu]{{{}^{#3}\mkern#1#2_{#4}}}
 \newcommand*{\perm}[1][-3mu]{\permcomb[#1]{P}}
 \newcommand*{\comb}[1][-1mu]{\permcomb[#1]{C}}
@@ -12,6 +15,10 @@
 \newcommand\T{\rule{0pt}{2.6ex}}       % Top strut
 \newcommand\B{\rule[-1.2ex]{0pt}{0pt}} % Bottom strut
 \setlist[enumerate]{font=\small\bfseries}
+
+%\newenvironment{soln}
+%  {\renewcommand\qedsymbol{$\blacksquare$}\begin{proof}[Solution]}
+%  {\end{proof}}
 
 \begin{document}
 
@@ -29,16 +36,21 @@
 \numberwithin{equation}{enumi}
 \setcounter{enumi}{3}
 \setcounter{enumii}{6}
-\item Three letters are dictated to three persons and an envelope is addressed to each of them, the letters are inserted into the envelopes at random so that each envelope contains exactly one letter. Find the probability that at least one letter is in its proper envelope.\\
-	\solution 
-		Let $X$ be the random variable denoting the number of letters in proper envelopes. Then the total number of outcomes in this experiment's sample space is given by \[n(S)=3!=6 \numberthis \] So, the possible values for $X$ are \cbrak{0,1,3}. And,
-  \begin{align}
-	  n(X=1) &= \comb{3}{1} \times 1 \times 1 = 3 \\
-	  n(X=3) &= 1 \times 1 \times 1 = 1
-  \end{align}
-  \begin{align}
-	  \therefore \text{P}_{req} = \cfrac{n(X=1)+n(X=3)}{n(S)} = \cfrac{4}{6} = \cfrac{2}{3} 
-  \end{align}
+\item \footnote{Read question numbers as (CHAPTER NUMBER).(EXERCISE NUMBER).(QUESTION NUMBER)} Three letters are dictated to three persons and an envelope is addressed to each of them, the letters are inserted into the envelopes at random so that each envelope contains exactly one letter. Find the probability that at least one letter is in its proper envelope.\\
+  \solution
+		Let $X$ be the random variable denoting the number of letters in proper envelopes. We generate the set of events for different cases, i.e., when $X = \cbrak{0,1,3}$ and use that to calculate the required probability. The link to the code to achieve this is given below.
+%	\varsol 
+%		Let $X$ be the random variable denoting the number of letters in proper envelopes. Then the total number of outcomes in this experiment's sample space is given by \[n(S)=3!=6 \numberthis \] So, the possible values for $X$ are \cbrak{0,1,3}. And,
+%  \begin{align}
+%	  n(X=1) &= \comb{3}{1} \times 1 \times 1 = 3 \\
+%	  n(X=3) &= 1 \times 1 \times 1 = 1
+%  \end{align}
+%  \begin{align}
+%	  \therefore \text{P}_{req} = \cfrac{n(X=1)+n(X=3)}{n(S)} = \cfrac{4}{6} = \cfrac{2}{3} 
+%  \end{align}
+
+\medskip
+		\url{https://github.com/ahilan22/fwc-2/tree/main/probability/assignment/codes/11-16-4-6.py}
 \end{enumerate}
 
 \section*{Class XII}
@@ -85,20 +97,24 @@
 \item From a lot of 30 bulbs which include 6 defectives, a sample of 4 bulbs is drawn at random with replacement. Find the probability distribution of the number of defective bulbs.\\
 	\solution
 		Let $X$ be the random variable denoting the number of defective bulbs. Let $E_1 \text{ and } E_2$ be the event of drawing a non-defective bulb and a defective bulb.
-		\[ \text{P}(E_1)=\cfrac{24}{30} \text{ , } \text{P}(E_2)=\cfrac{6}{30} \numberthis\]
-		Since we replace the item after drawing out of the box, (using multiplication rule)
-	\begin{table}[h]
-	\small
-	\centering
-		\begin{tabular}[20pt]{|c|c|c|} \hline
-			\T \B \textbf{Probability}&\textbf{Calculation}&\textbf{Value}\\ \hline
-			P$(X=0)$ \T \B &$\comb{4}{0} \times \cfrac{24}{30}\times \cfrac{24}{30}\times \cfrac{24}{30}\times \cfrac{24}{30}$ &$\cfrac{256}{625}$ \\[1.5ex] \hline
-			P$(X=1)$ \T \B &$\comb{4}{1} \times \cfrac{6}{30}\times \cfrac{24}{30}\times \cfrac{24}{30}\times \cfrac{24}{30}$  &$\cfrac{256}{625}$ \\[1.5ex] \hline
-			P$(X=2)$ \T \B &$\comb{4}{2} \times \cfrac{6}{30}\times \cfrac{6}{30}\times \cfrac{24}{30}\times \cfrac{24}{30}$   &$\cfrac{96}{625}$  \\[1.5ex] \hline
-			P$(X=3)$ \T \B &$\comb{4}{3} \times \cfrac{6}{30}\times \cfrac{6}{30}\times \cfrac{6}{30}\times \cfrac{24}{30}$    &$\cfrac{16}{625}$  \\[1.5ex] \hline
-			P$(X=4)$ \T \B &$\comb{4}{4} \times \cfrac{6}{30}\times \cfrac{6}{30}\times \cfrac{6}{30}\times \cfrac{6}{30}$     &$\cfrac{1}{625}$   \\[1.5ex] \hline
-		\end{tabular}
-	\end{table} 
+	\begin{align}
+		\text{P}(E_2)&= p = \cfrac{6}{30}  \text{ ,} \\
+		 \text{P}(E_1)&= q = \cfrac{24}{30}
+	\end{align}
+		Since we replace the item after drawing out of the box, P($E_1$) and P($E_2$) remains same for each trial and each trials are independent. Also, we can see that $p+q=1$. Therefore, the trials of our random experiment $X$ are Bernoulli trials. \\
+		Hence, we can define our probability distribution as binomial distribution, B($n,p$), where $n$ is number of trials. The probability function of B$\brak{4,\frac{6}{30}}$ is \[\text{P($X=x$)}=\comb{n}{x}p^xq^{n-x} \numberthis \]
+%	\begin{table}[h]
+%	\small
+%	\centering
+%		\begin{tabular}[20pt]{|c|c|c|} \hline
+%			\T \B \textbf{Probability}&\textbf{Calculation}&\textbf{Value}\\ \hline
+%			P$(X=0)$ \T \B &$\comb{4}{0} \times \cfrac{24}{30}\times \cfrac{24}{30}\times \cfrac{24}{30}\times \cfrac{24}{30}$ &$\cfrac{256}{625}$ \\[1.5ex] \hline
+%			P$(X=1)$ \T \B &$\comb{4}{1} \times \cfrac{6}{30}\times \cfrac{24}{30}\times \cfrac{24}{30}\times \cfrac{24}{30}$  &$\cfrac{256}{625}$ \\[1.5ex] \hline
+%			P$(X=2)$ \T \B &$\comb{4}{2} \times \cfrac{6}{30}\times \cfrac{6}{30}\times \cfrac{24}{30}\times \cfrac{24}{30}$   &$\cfrac{96}{625}$  \\[1.5ex] \hline
+%			P$(X=3)$ \T \B &$\comb{4}{3} \times \cfrac{6}{30}\times \cfrac{6}{30}\times \cfrac{6}{30}\times \cfrac{24}{30}$    &$\cfrac{16}{625}$  \\[1.5ex] \hline
+%			P$(X=4)$ \T \B &$\comb{4}{4} \times \cfrac{6}{30}\times \cfrac{6}{30}\times \cfrac{6}{30}\times \cfrac{6}{30}$     &$\cfrac{1}{625}$   \\[1.5ex] \hline
+%		\end{tabular}
+%	\end{table} 
 	\begin{table}[h!]
 	\normalsize
 	\centering
@@ -111,5 +127,5 @@
 	\end{table}\\
 \end{enumerate}
 
-\noindent \footnotesize{**Read question numbers as (CHAPTER NUMBER).(EXERCISE NUMBER).(QUESTION NUMBER)}
+
 \end{document}
