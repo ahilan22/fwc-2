@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.9.13)  21 DEC 2022 13:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.9.13)  21 DEC 2022 16:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -460,12 +460,6 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 42.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Overfull \hbox (1.88371pt too wide) detected at line 45
-\OML/cmm/m/it/12 P \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 X \OMS/cmsy/m/n/12 ^^B \O
-ML/cmm/m/it/12 Y \OT1/cmr/m/n/12 = []
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 51--54
 
  []
@@ -482,16 +476,13 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 55--62
  []
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 122--122
+Underfull \hbox (badness 10000) in paragraph at lines 119--119
 [][][]$\OT1/ptm/m/n/12 https : / / github . com / ahilan22 / fwc-[]2 / tree / m
 ain /
  []
 
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 116--123
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 113--120
 [] 
  []
 
@@ -505,24 +496,24 @@ Package rerunfilecheck Info: File `assign.out' has not changed.
 Here is how much of TeX's memory you used:
  10845 strings out of 478287
  169499 string characters out of 5849289
- 496720 words of memory out of 5000000
+ 495720 words of memory out of 5000000
  28895 multiletter control sequences out of 15000+600000
  509826 words of font info for 110 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  60i,13n,63p,447b,417s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-r8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on assign.pdf (1 page, 124389 bytes).
+f-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/urw/times/utmr8a.pfb>
+Output written on assign.pdf (1 page, 122983 bytes).
 PDF statistics:
  93 PDF objects out of 1000 (max. 8388607)
  65 compressed objects within 1 object stream
