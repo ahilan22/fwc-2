@@ -44,7 +44,7 @@
 	\multicolumn{1}{|p{\gnumericColA}|}%
 	{\gnumericPB{\centering}\gnumbox{2/5}}
     ```
-   change the above to
+1. change the above to
 	```latex
 	\multicolumn{1}{|p{\gnumericColA}|}%
 	{\gnumericPB{\centering}\gnumbox{$\frac{2}{5}}$}
