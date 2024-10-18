@@ -28,11 +28,9 @@
 	\usepackage{hhline}
 	\usepackage{ifthen}
     ```
-1. **making table**, (place this block where the table is to be placed and also give proper location for table.tex in \input)
+1. **making table**, (give proper location for table.tex in \input)
 	```latex
-	\begin{table}[h]
-		\input{tables/table}
-	\end{table}
+	\input{tables/table}
     ```
 ## in table.tex
 1. for obtaining fractions as in math mode, etc..
@@ -48,3 +46,10 @@
 		\multicolumn{1}{|p{\gnumericColA}|}%
 		{\gnumericPB{\centering}\gnumbox{$\frac{2}{5}}$}
     ```
+
+ ## captions
+ 1. for adding captions add caption in the longtable environment.
+ 	```latex
+  		\caption{Results after DFT} \label{TableAfterDFT} \\
+    ```
+
